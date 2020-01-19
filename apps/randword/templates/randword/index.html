@@ -1,0 +1,22 @@
+
+<!DOCTYPE html>
+<html lang='en'>
+    <head>
+        <meta charset='UTF-8'>
+        <title>Random Word</title>
+        {% load static %}
+        <link rel='stylesheet' href='{% static "randword/css/style.css" %}'>
+    </head>
+    <body>
+        <div class='wrapper'>
+            <h3>Random Word (attempt #{{ count }})</h3><br>
+            <h1>{{ random }}</h1>
+            <form action='/random'>
+                <input type='submit' value='Generate'>
+            </form>
+            <form action='/random/reset'>
+                <input type='submit' value='reset' name='reset'>
+            </form>
+        </div>
+    </body>
+</html>
